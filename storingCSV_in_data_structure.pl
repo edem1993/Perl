@@ -25,8 +25,9 @@ sub main {
         # print "'$line'\n";
 
         # match 0 or more spaces
+        # make values for keys
         my ($name, $payment, $date) = split /\s*,\s*/, $line;
-
+        # makes %values hash with the values called
         my %values = (
             "Name" => $name,
             "Payment" => $payment,
@@ -38,6 +39,10 @@ sub main {
 
     close(INPUT);
 
+    # uses [rows] and {"hahs_values"}
+	#print $data[1]{"Date"} . "\n";
+
+    # references the "Payment" key from the hash!
     foreach my $data(@data) {
         print $data->{"Payment"} . "\n";
 
