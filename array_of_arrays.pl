@@ -33,7 +33,7 @@ sub main {
     }
 
     close(INPUT);
-    # multi dimensional, [horizontal][vertical]
+    # multi dimensional, [sor][oszlop]
     print $lines[2][2] . "\n";
 
     foreach my $line(@lines) {
